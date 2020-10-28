@@ -4,8 +4,9 @@ set hls ic is
 set number
 colorscheme molokai 
 set wildmenu
-set wildmode
+"set wildmode
 set wildmode=longest:full,full
+set belloff=all
 
 " An example for a vimrc file.
 "
