@@ -63,6 +63,8 @@
   (which-key-mode))
 
 ;; Custom keybinding
+;;; a config I think I picked up from 'Clojure for the Brave and True'? Maybe mixed in are some of my hacks
+
 (use-package general
   :ensure t
   :config (general-define-key
@@ -107,4 +109,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
