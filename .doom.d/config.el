@@ -6,7 +6,7 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "Ryan Marion"
+(setq user-full-name "rzm"
       user-mail-address "rzm@kount.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
@@ -25,13 +25,22 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
+
+;; some themes I like
 ;; (setq doom-theme 'doom-dark+)
-(setq doom-theme 'doom-tomorrow-night)
+;; (setq doom-theme 'doom-tomorrow-night)
 ;; (setq doom-theme 'doom-opera)
+;; (setq doom-theme 'misterioso)
+;; (setq doom-theme 'doom-henna)
 ;; (setq doom-theme 'doom-acario-dark)
 ;; (setq doom-theme 'doom-one)
+;; (setq doom-theme 'rzm-dark+)
+;; (setq doom-theme 'rzm-manoj-dark)
+
+;; currently enabled theme and font settings
+(setq doom-theme 'doom-nord)
 (setq doom-font (font-spec :family "Menlo" :size 14)
-      doom-big-font (font-spec :family "Menlo" :size 18))
+      doom-big-font (font-spec :family "Menlo" :size 20))
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -39,7 +48,7 @@
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type nil)
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
@@ -59,10 +68,12 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;;;;;;;;;;;;;;;;;
+;; rzm customs ;;
+;;;;;;;;;;;;;;;;;
 
-
+(add-hook 'before-save-hook 'delete-trailing-whitespace) ;; kill trailing whitespace
 (add-to-list 'auto-mode-alist '("\\.yaml.tmpl\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.cshtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.info\\'" . Info-on-current-buffer))
-(add-hook 'window-setup-hook #'toggle-frame-maximized)
+(add-hook 'window-setup-hook #'toggle-frame-maximized) ;; fullscreen
