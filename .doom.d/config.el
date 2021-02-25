@@ -9,10 +9,6 @@
 (setq user-full-name "rzm"
       user-mail-address "rzm@kount.com")
 
-;;  mode line stuff
-;; (setq sml/no-confirm-load-theme t)
-;; (sml/setup)
-
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
 ;;
