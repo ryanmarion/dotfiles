@@ -8,6 +8,7 @@
 (package! web-mode)
 (package! yaml-mode)
 (package! cmake-mode)
+(package! rich-minority)
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)

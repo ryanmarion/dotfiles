@@ -9,6 +9,10 @@
 (setq user-full-name "rzm"
       user-mail-address "rzm@kount.com")
 
+;;  mode line stuff
+;; (setq sml/no-confirm-load-theme t)
+;; (sml/setup)
+
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
 ;;
@@ -38,7 +42,7 @@
 ;; (setq doom-theme 'rzm-manoj-dark)
 
 ;; currently enabled theme and font settings
-(setq doom-theme 'doom-nord)
+(setq doom-theme 'rzm-dark+)
 (setq doom-font (font-spec :family "Menlo" :size 14)
       doom-big-font (font-spec :family "Menlo" :size 20))
 
@@ -77,3 +81,11 @@
 (add-to-list 'auto-mode-alist '("\\.cshtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.info\\'" . Info-on-current-buffer))
 (add-hook 'window-setup-hook #'toggle-frame-maximized) ;; fullscreen
+
+;; suppress minor mode-line modes from displaying
+(rich-minority-mode 1)
+(setq rm-blacklist
+      (format "^ \\(%s\\)$"
+              (mapconcat #'identity
+                         '("Fly.*" "Projectile.*" "PgLn" "GCMH" "WK" "better-jumper" "EG.*" "dtrt-indent" "$" "Abbrev" "yas" "SP" "~" "ws" "wb" "GitGutter" "ivyjk")
+                         "\\|")))
