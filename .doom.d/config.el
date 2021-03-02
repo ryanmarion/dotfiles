@@ -85,3 +85,19 @@
               (mapconcat #'identity
                          '("Fly.*" "Projectile.*" "PgLn" "GCMH" "WK" "better-jumper" "EG.*" "dtrt-indent" "$" "Abbrev" "yas" "SP" "~" "ws" "wb" "GitGutter" "ivyjk")
                          "\\|")))
+
+(setq-default mode-line-format
+              (list
+               " -- "
+               'mode-line-mule-info
+               'mode-line-modified
+               'mode-line-frame-identification
+               "   "
+               'mode-line-buffer-identification
+               "   "
+               'mode-line-position
+               '(vc-mode vc-mode)
+               "   ("
+               'mode-name
+               ") -- "
+               ))
