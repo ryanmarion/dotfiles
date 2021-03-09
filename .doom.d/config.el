@@ -88,7 +88,7 @@
 
 (setq-default mode-line-format
               (list
-               " -- "
+               " --   "
                'mode-line-mule-info
                'mode-line-modified
                'mode-line-frame-identification
@@ -99,5 +99,5 @@
                '(vc-mode vc-mode)
                "   ("
                'mode-name
-               ") -- "
+               ")   --  "
                ))
