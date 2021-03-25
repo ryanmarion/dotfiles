@@ -15,8 +15,8 @@
  '(jdee-db-requested-breakpoint-face-colors (cons "#171F24" "#579C4C"))
  '(jdee-db-spec-breakpoint-face-colors (cons "#171F24" "#777778"))
  '(objed-cursor-color "#D16969")
- '(org-agenda-files
-   '("~/Documents/dev/rzm-notes/kount.org" "~/Documents/dev/rzm-notes/itt.org" "/Users/rzm/Documents/dev/rzm-notes/todo.org" "~/Documents/dev/rzm-notes/projects/business/cleaning.org"))
+;; '(org-agenda-files
+;;   '("~/dev/rzm-notes/kount.org" "~/dev/rzm-notes/itt.org" "~/dev/rzm-notes/todo.org" "~/dev/rzm-notes/projects/business/cleaning.org"))
  '(package-selected-packages '(web-mode php-mode))
  '(pdf-view-midnight-colors (cons "#d4d4d4" "#1e1e1e"))
  '(rustic-ansi-faces

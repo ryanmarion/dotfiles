@@ -44,7 +44,11 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Documents/dev/rzm-notes/")
+(setq org-directory "~/dev/rzm-notes/")
+(setq org-agenda-files
+      '("~/dev/rzm-notes/"
+        "~/dev/rzm-notes/projects/business/"))
+(setq initial-major-mode 'org-mode)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
