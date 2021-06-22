@@ -7,8 +7,10 @@
 (package! php-mode)
 (package! web-mode)
 (package! yaml-mode)
-(package! cmake-mode)
+;;(package! cmake-mode)
 (package! rich-minority)
+(package! protobuf-mode)
+(package! dap-mode)
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)

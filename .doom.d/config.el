@@ -34,6 +34,8 @@
 ;; (setq doom-theme 'doom-henna)
 ;; (setq doom-theme 'doom-acario-dark)
 ;; (setq doom-theme 'doom-one)
+
+;; I like to think I have an eye for aesthetics. here are my custom themes
 ;; (setq doom-theme 'rzm-dark+)
 ;; (setq doom-theme 'rzm-manoj-dark)
 
@@ -45,10 +47,6 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/dev/rzm-notes/")
-(setq org-agenda-files
-      '("~/dev/rzm-notes/"
-        "~/dev/rzm-notes/projects/business/"))
-(setq initial-major-mode 'org-mode)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -77,10 +75,20 @@
 ;;;;;;;;;;;;;;;;;
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace) ;; kill trailing whitespace
+
+;; syntax highlighting for uncommon extensions
 (add-to-list 'auto-mode-alist '("\\.yaml.tmpl\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.cshtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.info\\'" . Info-on-current-buffer))
 (add-hook 'window-setup-hook #'toggle-frame-maximized) ;; fullscreen
+
+;; helps the go lsp work mo' bettah
+(setq lsp-enable-file-watchers nil)
+
+;; some debugger libs for webdev to assist with react work. disable at your leisure
+(require 'dap-chrome)
+(require 'dap-node)
+(require 'dap-ui)
 
 ;; suppress minor mode-line modes from displaying
 (rich-minority-mode 1)
@@ -90,6 +98,7 @@
                          '("Fly.*" "Projectile.*" "PgLn" "GCMH" "WK" "better-jumper" "EG.*" "dtrt-indent" "$" "Abbrev" "yas" "SP" "~" "ws" "wb" "GitGutter" "ivyjk")
                          "\\|")))
 
+;; my minimalist mode line that makes me feel cool
 (setq-default mode-line-format
               (list
                " --   "
