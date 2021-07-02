@@ -4,13 +4,8 @@
 ;; To install a package with Doom you must declare them here and run 'doom sync'
 ;; on the command line, then restart Emacs for the changes to take effect -- or
 ;; use 'M-x doom/reload'.
-(package! php-mode)
-(package! web-mode)
-(package! yaml-mode)
-;;(package! cmake-mode)
+(package! prettier-js)
 (package! rich-minority)
-(package! protobuf-mode)
-(package! dap-mode)
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)
