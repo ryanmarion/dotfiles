@@ -10,13 +10,14 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'tomasiser/vim-code-dark'
+Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 "=
@@ -24,7 +25,7 @@ call plug#end()
 "
 
 syntax enable
-colorscheme codedark
+colorscheme nord
 let g:mapleader = ","
 
 "CoC extensions"
@@ -45,17 +46,28 @@ set showmode
 set history=1000
 set term=screen-256color
 let NERDTreeShowHidden=1
+set cursorline
+set number 
+
+"Airline Config
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#disable_rtp_load = 1
+let g:airline_extensions = ['branch', 'tabline', 'hunks', 'coc']
 
 "=
 "Key Maps"
 "=
+
+"turn off recording
+map q <Nop>
 
 "nerd tree
 nnoremap <leader>nt :call OpenOrFocusNERDTree()<CR>
 nnoremap <leader>ct :NERDTreeClose<CR>
 
 "search for files/string matches
-map <C-p> :ProjectFiles<CR>
+map <C-p> :GFiles<CR>
+map <C-o> :Ag<CR>
 
 "coc, format code
 nnoremap <leader>cf :Format<CR>
@@ -64,6 +76,14 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" auto pair these chars
+"ino " ""<left>
+"ino ' ''<left>
+"ino ( ()<left>
+"ino [ []<left>
+"ino { {}<left>
+"ino {<CR> {<CR>}<ESC>O
 
 "=
 "Commands"
