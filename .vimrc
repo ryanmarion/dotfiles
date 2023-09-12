@@ -48,6 +48,10 @@ set term=screen-256color
 let NERDTreeShowHidden=1
 set cursorline
 set number 
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 "Airline Config
 let g:airline#extensions#tabline#enabled = 1
@@ -71,6 +75,8 @@ map <C-o> :Ag<CR>
 
 "coc, format code
 nnoremap <leader>cf :Format<CR>
+"coc, autocomplete with <enter>
+"inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
